@@ -11,6 +11,9 @@ class UserDAO:
     def get_all(self):
         return self.session.query(User).all()
 
+    def get_filter(self, filter_dict):
+        return self.session.query(User).filter_by(**filter_dict).all()
+
     def create(self, user_d):
         obj = User(**user_d)
         self.session.add(obj)

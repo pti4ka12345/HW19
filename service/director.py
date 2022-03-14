@@ -1,4 +1,4 @@
-from dao.director import DirectorDAO
+from HW19.dao.director import DirectorDAO
 
 
 class DirectorService:

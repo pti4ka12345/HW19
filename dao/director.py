@@ -1,4 +1,4 @@
-from dao.model.director import Director
+from HW19.dao.model.director import Director
 
 
 class DirectorDAO:

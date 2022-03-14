@@ -1,12 +1,12 @@
-from dao.director import DirectorDAO
-from dao.genre import GenreDAO
-from dao.movie import MovieDAO
+from HW19.dao.director import DirectorDAO
+from HW19.dao.genre import GenreDAO
+from HW19.dao.movie import MovieDAO
 from HW19.dao.user import UserDAO
+from HW19.service.director import DirectorService
+from HW19.service.genre import GenreService
+from HW19.service.movie import MovieService
 from HW19.service.user import UserService
-from service.director import DirectorService
-from service.genre import GenreService
-from service.movie import MovieService
-from setup_db import db
+from HW19.setup_db import db
 
 director_dao = DirectorDAO(session=db.session)
 genre_dao = GenreDAO(session=db.session)
