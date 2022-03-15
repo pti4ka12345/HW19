@@ -20,7 +20,7 @@ class UsersView(Resource):
         else:
             all_users = user_service.get_all()
         if all_users:
-            return UserSchema.dump(all_users), 200
+            return UserSchema(many=True).dump(all_users), 200
         return "not found", 400
     def post(self):
         req_json = request.json

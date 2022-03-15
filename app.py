@@ -4,6 +4,7 @@ from flask_restx import Api
 from HW19.config import Config
 from HW19.setup_db import db
 from HW19.dao.model.user import User
+from HW19.views.auth import auth_ns
 from HW19.views.directors import director_ns
 from HW19.views.genres import genre_ns
 from HW19.views.movies import movie_ns
@@ -25,6 +26,7 @@ def register_extensions(app):
     api.add_namespace(genre_ns)
     api.add_namespace(movie_ns)
     api.add_namespace(user_ns)
+    api.add_namespace(auth_ns)
 
 
 def create_data(app, db):

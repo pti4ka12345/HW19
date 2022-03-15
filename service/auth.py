@@ -39,7 +39,7 @@ def admin_required(func):
             if role == "admin":
                 return func(*args, **kwargs)
         abort(401, "Admin role required")
-        return wrapper
+    return wrapper
 
 def generate_token(data):
     min30 = datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
